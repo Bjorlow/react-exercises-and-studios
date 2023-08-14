@@ -1,7 +1,9 @@
 import styles from './Ingredients.module.css';
 
-export default function RecipeIngredients() {
+const RecipeIngredients = () => {
+
     const ingredients = ["chicken", "shrimp", "andouille","jalapeno", "garlic"];
+
    return (
     <div>
     <h3>Recipe Ingredients</h3>
@@ -15,3 +17,5 @@ export default function RecipeIngredients() {
  </div>
    ) 
 };
+
+export default RecipeIngredients;
