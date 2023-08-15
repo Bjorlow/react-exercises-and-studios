@@ -1,7 +1,7 @@
 const RecipeAuthor = () => {
-   let authorLink = "";
-   let authorPhoto = "";
-   let authorName = "";
+   let authorLink = "https://www.gimmesomeoven.com/jambalaya-recipe/";
+   let authorPhoto = "https://www.gimmesomeoven.com/images/about-new-round.jpg";
+   let authorName = "Ali";
 
    return (
       <div>
@@ -15,27 +15,43 @@ const RecipeAuthor = () => {
 }
 
 const RecipeIngredients = () => {
-   const ingredients = [];
+   const ingredients = [
+      'Celery',
+      'Onion',
+      'Bell pepper',
+      'Jalapeno',
+      'Garlic',
+      'Chicken',
+      'Shrimp',
+      'Andouille',
+      'Crushed Tomatoes',
+      'Rice',
+      'Okra',
+      'Salt',
+      'Black pepper',
+   ];
+
+   let ingredientListItems = ingredients.map((ingredient, index) => {
+      return <li key={index}>{ingredient}</li>;
+   });
    return(
       <div>
          <h3>Recipe Ingredients</h3>
          <ul>
-            <li>{ingredients[0]}</li>
-            <li>{ingredients[1]}</li>
-            <li>{ingredients[2]}</li>
-            <li>{ingredients[3]}</li>
-            <li>{ingredients[4]}</li>
+         {ingredientListItems}
          </ul>
       </div>
    );
-}
+};
 
 const RecipeDescription = () => {
    return (
       <div> 
          <div>
-            <h1></h1>
-            <p></p>
+            <h1>Jambalya</h1>
+            <p>Hands-down the best jambalaya recipe! It is surprisingly easy 
+               to make, customizable with your favorite proteins and full of bold, zesty,
+                Cajun jambalaya flavors that everyone will love.</p>
          </div>
          <div className="recipePhotoBlock">
             <RecipeIngredients />
@@ -47,7 +63,11 @@ const RecipeDescription = () => {
 
 const RecipePhoto = () => {
    return (
-      <img src="" alt="" className="imageUpdates"/>
+      <img src="https://www.gimmesomeoven.com/wp-content/uploads/2014/03/Cajun-Jambalaya-Recipe-with-Andouille-Sausage-Shrimp-and-Chicken-32-1100x1650.jpg"
+       alt=""
+      className="imageUpdates"
+      height="450px"
+      />
    );
 }
 
